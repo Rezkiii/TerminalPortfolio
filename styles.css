@@ -1,0 +1,99 @@
+/* General Styles */
+body {
+  font-family: monospace; /* Set a monospace font for terminal-like appearance */
+  background-color: #000; /* Black background for terminal-like style */
+  color: #0f0; /* Green text color for terminal-like style */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Make the body a flex container */
+  flex-direction: column; /* Arrange elements vertically */
+  align-items: center; /* Center elements horizontally */
+  justify-content: flex-start; /* Align elements to the top */
+  height: 100vh; /* Make the body take the full viewport height */
+}
+
+/* Terminal Container */
+.terminal-container {
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Add rounded corners for visual appeal */
+  padding: 10px; /* Add some padding for spacing */
+  font-size: 16px; /* Set font size for terminal-like appearance */
+  line-height: 1.5; /* Adjust line height for readability */
+  width: 80%; /* Adjust this percentage as needed */
+  max-width: 800px; /* Set a maximum width for larger screens */
+  position: fixed; /* Fix the container to the viewport */
+  top: 0; /* Position it at the top */
+  left: 0; /* Align it to the left edge */
+  z-index: 1; /* Ensure it's above other elements */
+  background-color: #000; /* Darker background for terminal-like style */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow effect */
+}
+
+/* Responsive Adjustments for Container */
+@media (max-width: 768px) {
+  .terminal-container {
+    width: 95%; /* Adjust width for smaller screens */
+  }
+}
+
+/* Terminal Element */
+.terminal {
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  width: 80%;
+  max-width: 800px;
+}
+
+/* Prompt */
+.prompt {
+  display: flex;
+  align-items: center;
+  width: 60%; /* Adjust this value as needed */
+}
+
+/* User, Host, and Directory Styles */
+.user,
+.host,
+.directory {
+  margin-right: 5px;
+}
+
+/* Input Field */
+.input {
+  background-color: transparent;
+  color: inherit;
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+/* Output */
+.output {
+  margin-top: 10px; /* Add some margin from the top */
+  white-space: pre-wrap; /* Preserve line breaks and wrap text */
+  overflow-y: auto; /* Enable vertical scrollbar when content overflows */
+  max-height: 400px; /* Set a maximum height to prevent excessive scrolling */
+}
+
+/* Responsive Font Size for Output */
+@media (max-width: 768px) {
+  .output {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+}
+
+/* Input Placeholder Cursor Animation */
+.input:empty:before {
+  content: "\2588";
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
