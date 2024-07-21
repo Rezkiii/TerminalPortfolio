@@ -30,7 +30,7 @@ inputElement.addEventListener('keydown', function (event) {
 					outputElement.textContent = ''; // Clear the output area
 						
 				} else if (input.toLowerCase() === 'contact') {
-		    			outputElement.innerHTML = ''; // Clear existing content (optional)
+		    			
 
 						// Create clickable links for contact information
 					outputElement.innerHTML += '\nContact Me At : \n';
